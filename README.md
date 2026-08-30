@@ -127,7 +127,7 @@ Phase 0 is the planning phase, so implementation phases begin with Phase 1.
 
 ## Engineering Principles
 
-CoudsOps Hub follows these rules throughout development:
+CloudOps Hub follows these rules throughout development:
 
 - Build before claiming.
 - Test before declaring complete.
