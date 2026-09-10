@@ -40,3 +40,4 @@ crash.*.log
 dist/
 build/
 *.egg-info/
+k8s/postgres/secret.yaml

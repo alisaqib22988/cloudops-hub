@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend
+  namespace: cloudops-hub
+  labels:
+    app.kubernetes.io/name: backend
+    app.kubernetes.io/part-of: cloudops-hub
+spec:
+  selector:
+    app.kubernetes.io/name: backend
+  ports:
+    - name: http
+      protocol: TCP
+      port: 8000
+      targetPort: http
+  type: ClusterIP

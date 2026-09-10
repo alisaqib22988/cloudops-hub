@@ -6,6 +6,7 @@ from app.api.incidents import router as incidents_router
 from app.api.deployments import router as deployments_router
 from app.api.metrics import router as metrics_router
 from app.api.environments import router as environments_router
+from app.api.load_test import router as load_test_router
 
 
 app = FastAPI(
@@ -33,6 +34,7 @@ app.include_router(incidents_router)
 app.include_router(deployments_router)
 app.include_router(metrics_router)
 app.include_router(environments_router)
+app.include_router(load_test_router)
 
 
 @app.get("/health")

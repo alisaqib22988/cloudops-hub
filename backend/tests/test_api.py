@@ -46,3 +46,11 @@ def test_environments():
 
     assert response.status_code == 200
     assert len(response.json()) == 3
+
+
+def test_load_test():
+    response = client.get("/load-test?duration=1")
+
+    assert response.status_code == 200
+    assert response.json()["status"] == "completed"
+    assert response.json()["duration_seconds"] == 1
