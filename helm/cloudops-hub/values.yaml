@@ -1,0 +1,32 @@
+nameOverride: backend
+fullnameOverride: backend
+
+replicaCount: 2
+
+image:
+  repository: cloudops-hub-backend
+  tag: latest
+  pullPolicy: Never
+
+service:
+  type: ClusterIP
+  port: 8000
+  targetPort: 8000
+
+database:
+  secretName: postgres-secret
+  secretKey: DATABASE_URL
+
+resources:
+  requests:
+    cpu: "100m"
+    memory: "128Mi"
+  limits:
+    cpu: "500m"
+    memory: "512Mi"
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
